@@ -1,2 +1,2 @@
 # Personal Website
-https://jyuntins.github.io/
+Website: https://jyuntins.github.io/
