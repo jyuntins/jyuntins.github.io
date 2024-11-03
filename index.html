@@ -102,24 +102,33 @@
                                 <em>Neural Information Processing Systems (NeurIPS)</em>, 2024
                                 <br>
                                 <br>
-                                Harmony4D is a large-scale multihuman dataset captured in in-the-wild environments, featuring diverse dynamic activities  
+                                A large-scale multihuman dataset captured in in-the-wild environments, featuring diverse dynamic activities  
                                 <br>
     
                             </p>
     
                             <div class="paper" id="deco">
-                                <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Tripathi_DECO_Dense_Estimation_of_3D_Human-Scene_Contact_In_The_Wild_ICCV_2023_paper.html">paper</a> |
+                                <a href="https://arxiv.org/abs/2410.20294">paper</a> |
                                 <a href="javascript:toggleblock(&#39;deco_abs&#39;)">abstract</a> |
-                                <a href="https://deco.is.tue.mpg.de/">project</a> |
-                                <a href="https://deco.is.tue.mpg.de/download.php">dataset</a> |
-                                 <a href="https://www.youtube.com/watch?v=o7MLobqAFTQ&feature=youtu.be">video</a> |
-                                 <a shape="rect" href="javascript:togglebib(&#39;deco&#39;)" class="togglebib">bibtex</a> |
-                                 <a href="https://www.dropbox.com/scl/fi/kvhpfnkvga2pt19ayko8u/ICCV2023_DECO_Poster_v2.pptx?rlkey=ihbf3fi6u9j0ha9x1gfk2cwd0&dl=0">poster</a>
+                                <a href="https://jyuntins.github.io/harmony4d/">project</a> |
+                                <a href="https://huggingface.co/datasets/Jyun-Ting/Harmony4D/tree/main">dataset</a> |
+                                <a shape="rect" href="javascript:togglebib(&#39;deco&#39;)" class="togglebib">bibtex</a> |
     
-                                <!-- <a href="https://sites.google.com/corp/view/actionablerepresentations/"> project </a> -->
-    
-    
-                                <p align="justify"><i id="deco_abs" style="display: none;"> Understanding how humans use physical contact to interact with the world is key to enabling human-centric artificial intelligence. While inferring 3D contact is crucial for modeling realistic and physically-plausible human-object interactions, existing methods either focus on 2D, consider body joints rather than the surface, use coarse 3D body regions, or do not generalize to in-the-wild images. In contrast, we focus on inferring dense, 3D contact between the full body surface and objects in arbitrary images. To achieve this, we first collect DAMON, a new dataset containing dense vertex-level contact annotations paired with RGB images containing complex human-object and human-scene contact. Second, we train DECO, a novel 3D contact detector that uses both body-part-driven and scene-context-driven attention to estimate vertex-level contact on the SMPL body. DECO builds on the insight that human observers recognize contact by reasoning about the contacting body parts, their proximity to scene objects, and the surrounding scene context. We perform extensive evaluations of our detector on DAMON as well as on the RICH and BEHAVE datasets. We significantly outperform existing SOTA methods across all benchmarks. We also show qualitatively that DECO generalizes well to diverse and challenging real-world human interactions in natural images. The code, data, and models are available for research purposes. </i></p>
+                                <p align="justify"><i id="deco_abs" style="display: none;"> 
+                                  Understanding how humans interact with each other is key to building realistic multi-human virtual reality systems. 
+                                  This area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this 
+                                  issue mainly consist of activities captured entirely in controlled indoor environments with choreographed actions, 
+                                  significantly affecting their diversity. To address this, we introduce Harmony4D, a multi-view video dataset for 
+                                  human-human interaction featuring in-the-wild activities such as wrestling, dancing, MMA, and more. We use a flexible 
+                                  multi-view capture system to record these dynamic activities and provide annotations for human detection, tracking, 
+                                  2D/3D pose estimation, and mesh recovery for closely interacting subjects. We propose a novel markerless algorithm 
+                                  to track 3D human poses in severe occlusion and close interaction to obtain our annotations with minimal manual 
+                                  intervention. Harmony4D consists of 1.66 million images and 3.32 million human instances from more than 20 
+                                  synchronized cameras with 208 video sequences spanning diverse environments and 24 unique subjects. We rigorously 
+                                  evaluate existing stateof-the-art methods for mesh recovery and highlight their significant limitations in modeling 
+                                  close interaction scenarios. Additionally, we fine-tune a pre-trained HMR2.0 model on Harmony4D and demonstrate an 
+                                  improved performance of 54.8% PVE in scenes with severe occlusion and contact.</i>
+                                </p>
     
                                 <div style="white-space: pre-wrap; display: none;" class="bib">
                                   @misc{2410.20294,
