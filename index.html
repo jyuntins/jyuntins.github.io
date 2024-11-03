@@ -162,27 +162,36 @@
                             </p>
     
                             <div class="paper" id="emote">
-                                <a href="https://arxiv.org/abs/2306.08990">paper</a> |
-                                <a href="javascript:toggleblock(&#39;emote_abs&#39;)">abstract</a> |
-                                <a href="https://emote.is.tue.mpg.de/">project</a> |
-                                 <!-- <a href="https://www.youtube.com/watch?v=o7MLobqAFTQ&feature=youtu.be">video</a> | -->
+                                <a href="https://github.com/NTNU-ERC/Robinion-Balance-Board-PPO">project page</a>
+
+                                <a href="https://link.springer.com/chapter/10.1007/978-3-031-26135-0_4">paper</a> |
+                                <a href="javascript:toggleblock(&#39;balanceboard_abs&#39;)">abstract</a> |
+                                <a href="https://github.com/NTNU-ERC/Robinion-Balance-Board-PPO">project</a> |
                                  <a shape="rect" href="javascript:togglebib(&#39;emote&#39;)" class="togglebib">bibtex</a> 
-                                 <!-- <a href="https://www.dropbox.com/scl/fi/kvhpfnkvga2pt19ayko8u/ICCV2023_DECO_Poster_v2.pptx?rlkey=ihbf3fi6u9j0ha9x1gfk2cwd0&dl=0">poster</a> -->
-    
-                                <!-- <a href="https://sites.google.com/corp/view/actionablerepresentations/"> project </a> -->
     
     
-                                <p align="justify"><i id="emote_abs" style="display: none;"> To be widely adopted, 3D facial avatars must be animated easily, realistically, and directly from speech signals. While the best recent methods generate 3D animations that are synchronized with the input audio, they largely ignore the impact of emotions on facial expressions. Realistic facial animation requires lip-sync together with the natural expression of emotion. To that end, we propose EMOTE (Expressive Model Optimized for Talking with Emotion), which generates 3D talking-head avatars that maintain lip-sync from speech while enabling explicit control over the expression of emotion. To achieve this, we supervise EMOTE with decoupled losses for speech (i.e., lip-sync) and emotion. These losses are based on two key observations: (1) deformations of the face due to speech are spatially localized around the mouth and have high temporal frequency, whereas (2) facial expressions may deform the whole face and occur over longer intervals. Thus, we train EMOTE with a per-frame lip-reading loss to preserve the speech-dependent content, while supervising emotion at the sequence level. Furthermore, we employ a content-emotion exchange mechanism in order to supervise different emotions on the same audio, while maintaining the lip motion synchronized with the speech. To employ deep perceptual losses without getting undesirable artifacts, we devise a motion prior in the form of a temporal VAE. Due to the absence of high-quality aligned emotional 3D face datasets with speech, EMOTE is trained with 3D pseudo-ground-truth extracted from an emotional video dataset (i.e., MEAD). Extensive qualitative and perceptual evaluations demonstrate that EMOTE produces speech-driven facial animations with better lip-sync than state-of-the-art methods trained on the same data, while offering additional, high-quality emotional control. </i></p>
+                                <p align="justify"><i id="balanceboard_abs" style="display: none;"> 
+                                  Reinforcement Learning (RL) is a powerful tool and has been increasingly used in continuous control tasks such 
+                                  as locomotion and balancing in robotics. In this paper, we tackle a balancing task in a highly dynamic environment, 
+                                  using a humanoid agent and a balancing board. This task requires continuous actuation in order for the agent to 
+                                  stay in a balanced state. We developed an implementation using a state-of-theart RL algorithm and simulator that 
+                                  can achieve successful balancing in under 40 minutes of real-time with a single GPU. We sought to examine the impact 
+                                  of action space shaping in sample efficiency and designed 6 distinct control modes. Our constrained parallel control 
+                                  modes outperform a naive baseline in both sample efficiency and variance to the starting seed. The best performing 
+                                  control mode (PLS-R) is around 33% more sample efficient than the second-best, requiring 70 million fewer training 
+                                  timesteps to reach comparable performance.
+                                  </i>
+                                </p>
     
                                 <div style="white-space: pre-wrap; display: none;" class="bib">
-    @inproceedings{EMOTE,
-    title     = {Emotional Speech-Driven Animation with Content-Emotion Disentanglement},
-    author    = {Danecek, Radek and Chhatre, Kiran and Tripathi, Shashank and Wen, Yandong and Black, Michael and Bolkart, Timo},
-    publisher = {ACM},
-    year      = {2023},
-    doi       = {10.1145/3610548.3618183},
-    url       = {https://emote.is.tue.mpg.de/index.html}
-    }
+                                  @incollection{song2023reinforcement,
+                                    title={Reinforcement Learning and Action Space Shaping for a Humanoid Agent in a Highly Dynamic Environment},
+                                    author={Song, Jyun-Ting and Christmann, Guilherme and Jeong, Jaesik and Baltes, Jacky},
+                                    booktitle={Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing 2022-Winter},
+                                    pages={29--42},
+                                    year={2023},
+                                    publisher={Springer}
+                                  }
                                 </div>
                             </div>
                         </td>
