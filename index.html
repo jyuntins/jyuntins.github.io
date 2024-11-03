@@ -199,28 +199,27 @@
     
                     <tr>
                         <td style="padding:20px;width:20%;vertical-align:middle">
-                            <a href="assets/teaser_ipman_square.jpeg">
-                                <img src="assets/teaser_ipman_square.jpeg" width="200"></a>
+                          <video  width=100% muted autoplay loop>
+                            <source src="images/corsmal.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
                         </td>
                         <td width="58%" valign="top">
-                            <p><a href="https://ipman.is.tue.mpg.de/" id="IPMAN">
-                                <heading>3D Human Pose Estimation via Intuitive Physics</heading>
+                            <p><a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html" id="corsmal">
+                                <heading>The CORSMAL benchmark for the prediction of the properties of containers</heading>
                             </a><br>
-                                Shashank Tripathi, Lea Müller, Chun-Hao P. Huang, Omid Taheri, Michael Black, Dimitrios Tzionas<br>
-                                <em><a href="http://cvpr2023.thecvf.com/">Computer Vision and Pattern Recognition (CVPR)
-                                    2023 </a></href> </em>
-                                <!-- <em>(under submission)</a></href> </em> -->
+                                Alessio Xompero, et al.<br>
+                                <em>IEEE Access</em>, 2022
                                 <br>
                                 <br>
-                                IPMAN estimates a 3D body from a color image in a "stable" configuration by encouraging plausible floor contact and
-                                overlapping CoP and CoM. It exploits interpenetration of the body mesh with the ground plane as a heuristic for pressure.
+                                Estimate mass, type, and fill level of containers using multimodal dataset (visual, audio)
                                 <br>
     
                             </p>
     
                             <div class="paper" id="ipman">
-                                <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Tripathi_3D_Human_Pose_Estimation_via_Intuitive_Physics_CVPR_2023_paper.html">paper</a> |
-                                <a href="javascript:toggleblock(&#39;ipman_abs&#39;)">abstract</a> |
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9756023">paper</a> |
+                                <a href="javascript:toggleblock(&#39;corsmal_abs&#39;)">abstract</a> |
                                 <a href="https://ipman.is.tue.mpg.de/">project</a> |
                                 <a href="https://moyo.is.tue.mpg.de/">dataset</a> |
                                  <a href="https://www.youtube.com/watch?v=eZTtLUMnGIg">video</a> |
@@ -230,18 +229,35 @@
                                 <!-- <a href="https://sites.google.com/corp/view/actionablerepresentations/"> project </a> -->
     
     
-                                <p align="justify"><i id="ipman_abs" style="display: none;"> The estimation of 3D human body shape and pose from images has advanced rapidly. While the results are often well aligned with image features in the camera view, the 3D pose is often physically implausible; bodies lean, float, or penetrate the floor. This is because most methods ignore the fact that bodies are typically supported by the scene. To address this, some methods exploit physics engines to enforce physical plausibility. Such methods, however, are not differentiable, rely on unrealistic proxy bodies, and are difficult to integrate into existing optimization and learning frameworks. To account for this, we take a different approach that exploits novel intuitive-physics (IP) terms that can be inferred from a 3D SMPL body interacting with the scene. Specifically, we infer biomechanically relevant features such as the pressure heatmap of the body on the floor, the Center of Pressure (CoP) from the heatmap, and the SMPL body’s Center of Mass (CoM) projected on the floor. With these, we develop IPMAN, to estimate a 3D body from a color image in a “stable” configuration by encouraging plausible floor contact and overlapping CoP and CoM. Our IP terms are intuitive, easy to implement, fast to compute, and can be integrated into any SMPL-based optimization or regression method; we show examples of both. To evaluate our method, we present MoYo, a dataset with synchronized multi-view color images and 3D bodies with complex poses, body-floor contact, and ground-truth CoM and pressure. Evaluation on MoYo, RICH and Human3.6M show that our IP terms produce more plausible results than the state of the art; they improve accuracy for static poses, while not hurting dynamic ones. Code and data will be available for research. </i></p>
+                                <p align="justify"><i id="ipman_abs" style="display: none;"> 
+                                  The contactless estimation of the weight of a container and the amount of its content manipulated by a person are 
+                                  key pre-requisites for safe human-to-robot handovers. However, opaqueness and transparencies of the container and 
+                                  the content, and variability of materials, shapes, and sizes, make this estimation difficult. In this paper, 
+                                  we present a range of methods and an open framework to benchmark acoustic and visual perception for the estimation 
+                                  of the capacity of a container, and the type, mass, and amount of its content. The framework includes a dataset, 
+                                  specific tasks and performance measures. We conduct an in-depth comparative analysis of methods that used this 
+                                  framework and audio-only or vision-only baselines designed from related works. Based on this analysis, we can conclude 
+                                  that audio-only and audio-visual classifiers are suitable for the estimation of the type and amount of the content 
+                                  using different types of convolutional neural networks, combined with either recurrent neural networks or a majority 
+                                  voting strategy, whereas computer vision methods are suitable to determine the capacity of the container using 
+                                  regression and geometric approaches. Classifying the content type and level using only audio achieves a weighted average 
+                                  F1-score up to 81% and 97%, respectively. Estimating the container capacity with vision-only approaches and estimating 
+                                  the filling mass with audio-visual multi-stage approaches reach up to 65% weighted average capacity and mass scores. 
+                                  These results show that there is still room for improvement on the design of new methods. These new methods can be ranked 
+                                  and compared on the individual leaderboards provided by our open framework.
+                                </i>
+                                </p>
     
                                 <div style="white-space: pre-wrap; display: none;" class="bib">
-    @inproceedings{tripathi2023ipman,
-    title = {{3D} Human Pose Estimation via Intuitive Physics},
-    author = {Tripathi, Shashank and M{\"u}ller, Lea and Huang, Chun-Hao P. and Taheri Omid
-    and Black, Michael J. and Tzionas, Dimitrios},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
-    Recognition (CVPR)},
-    month = {June},
-    year = {2023}
-    }
+                                  @article{xompero2022corsmal,
+                                    title={The CORSMAL benchmark for the prediction of the properties of containers},
+                                    author={Xompero, Alessio and Donaher, Santiago and Iashin, Vladimir and Palermo, Francesca and Solak, G{\"o}khan and Coppola, Claudio and Ishikawa, Reina and Nagao, Yuichi and Hachiuma, Ryo and Liu, Qi and others},
+                                    journal={IEEE Access},
+                                    volume={10},
+                                    pages={41388--41402},
+                                    year={2022},
+                                    publisher={IEEE}
+                                  }
                                 </div>
                             </div>
                         </td>
