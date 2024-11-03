@@ -95,16 +95,14 @@
                         </td>
                         <td width="58%" valign="top">
                             <p><a href="https://deco.is.tue.mpg.de/" id="DECO">
-                                <heading>DECO: Dense Estimation of 3D Human-Scene COntact in the Wild</heading>
+                                <heading>Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions</heading>
                             </a><br>
-                                Shashank Tripathi, Agniv Chatterjee, Jean-Claude Passy, Hongwei Yi, Dimitrios Tzionas, Michael J. Black<br>
-                                <em><a href="http://iccv2023.thecvf.com/">International Conference on Computer Vision (ICCV)
-                                    2023 </a></href> </em>
+                                Rawal Khirodkar*, <strong>Jyun-Ting Song*</strong>, Jinkun Cao, Zhengyi Luo, Kris Kitani
                                 <br>
-                                <em><font color="red">(Oral presentation)</font></a></href> </em>
+                                <em>Neural Information Processing Systems (NeurIPS)</em>, 2024
                                 <br>
                                 <br>
-                                DECO estimates dense vertex-level 3D human-scene and human-object contact across the full body mesh and works on diverse and challenging human-object interactions in arbitrary in-the-wild images. DECO is trained on DAMON, a new and unique dataset with 3D contact annotations for in-the-wild images, manually annotated using a custom 3D contact labeling tool.
+                                Harmony4D is a large-scale multihuman dataset captured in in-the-wild environments, featuring diverse dynamic activities  
                                 <br>
     
                             </p>
@@ -124,14 +122,12 @@
                                 <p align="justify"><i id="deco_abs" style="display: none;"> Understanding how humans use physical contact to interact with the world is key to enabling human-centric artificial intelligence. While inferring 3D contact is crucial for modeling realistic and physically-plausible human-object interactions, existing methods either focus on 2D, consider body joints rather than the surface, use coarse 3D body regions, or do not generalize to in-the-wild images. In contrast, we focus on inferring dense, 3D contact between the full body surface and objects in arbitrary images. To achieve this, we first collect DAMON, a new dataset containing dense vertex-level contact annotations paired with RGB images containing complex human-object and human-scene contact. Second, we train DECO, a novel 3D contact detector that uses both body-part-driven and scene-context-driven attention to estimate vertex-level contact on the SMPL body. DECO builds on the insight that human observers recognize contact by reasoning about the contacting body parts, their proximity to scene objects, and the surrounding scene context. We perform extensive evaluations of our detector on DAMON as well as on the RICH and BEHAVE datasets. We significantly outperform existing SOTA methods across all benchmarks. We also show qualitatively that DECO generalizes well to diverse and challenging real-world human interactions in natural images. The code, data, and models are available for research purposes. </i></p>
     
                                 <div style="white-space: pre-wrap; display: none;" class="bib">
-    @inproceedings{tripathi2023deco,
-    title     = {{DECO}: Dense Estimation of {3D} Human-Scene Contact In The Wild},
-    author    = {Tripathi, Shashank and Chatterjee, Agniv and Passy, Jean-Claude and Yi, Hongwei and Tzionas, Dimitrios and Black, Michael J.},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2023},
-    pages     = {8001-8013}
-    }
+                                  @misc{2410.20294,
+                                    Author = {Rawal Khirodkar and Jyun-Ting Song and Jinkun Cao and Zhengyi Luo and Kris Kitani},
+                                    Title = {Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions},
+                                    Year = {2024},
+                                    Eprint = {arXiv:2410.20294},
+                                    }
                                 </div>
                             </div>
                         </td>
