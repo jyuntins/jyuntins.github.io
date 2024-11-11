@@ -66,6 +66,11 @@
 </head>
 
   <body>
+    <script>
+      function showEmail() {
+        document.getElementById('emailHolder').innerHTML = 'ude.umc.werdna@sniutnyj'.split("").reverse().join("");
+      }
+    </script>
 
     <table width="960" border="0" align="center" cellspacing="0" cellpadding="20">
         <tbody>
@@ -95,8 +100,9 @@
                             <br>
 
                           </p>
-
+                          
                           <p style="text-align:center">
+                            <a href="https://jyuntins.github.io/#" onclick="showEmail()" id="emailHolder"> Click to Reveal Email </a> &nbsp;/&nbsp;
                             <a href="mailto:jyuntins@andrew.cmu.edu">Email</a> &nbsp;/&nbsp;
                             <a href="data/Jyun_Ting_CV.pdf">CV</a> &nbsp;/&nbsp;
                             <a href="https://scholar.google.com/citations?hl=en&user=N1dz8cAAAAAJ">Scholar</a> &nbsp;/&nbsp;
