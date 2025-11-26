@@ -29,7 +29,7 @@
 
         strongred {
             font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            color: 'red';
+            color: red;
             font-size: 14px
         }
 
@@ -45,7 +45,7 @@
     <meta name="Jyun-Ting&#39;s CMU Homepage" http-equiv="Content-Type"
           content="Jyun-Ting&#39;s Homepage">
 
-    <link href="css" rel="stylesheet" type="text/css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -151,13 +151,75 @@
                     <tr>
                         <td style="padding:20px;width:20%;vertical-align:middle">
                           <video  width=100% muted autoplay loop>
+                            <source src="images/contact4d.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                          </video>
+                        </td>
+
+                        <td width="58%" valign="top">
+                            <p><a href="https://jyuntins.github.io/harmony4d" id="contact4d_title">
+                                <heading>Contact4D: A Video Dataset for Whole-body Human Motion and Finger Contact in Dexterous Operations</heading>
+                            </a><br>
+                                <strong>Jyun-Ting Song</strong>, Jungeun Kim, Jinkun Cao, Yu Lei, Takuma Yagi, Kris Kitani
+                                <br>
+                                <em>3D Vision (3DV)</em>, 2026
+                                <br>
+                                <br>
+                                A large-scale whole-body human dataset for dexterous operations with finger contact annotations  
+                                <br>    
+                            </p>
+    
+                            <div class="paper" id="contact4d">
+                                <a href="https://arxiv.org/abs/2410.20294">paper</a> |
+                                <a href="javascript:toggleblock(&#39;contact4d_abs&#39;)">abstract</a> |
+                                <a href="https://jyuntins.github.io/harmony4d/">project</a> |
+                                <a href="https://huggingface.co/datasets/Jyun-Ting/Harmony4D/tree/main">dataset</a> |
+                                <!-- <a shape="rect" href="javascript:togglebib(&#39;harmony4d&#39;)" class="togglebib">bibtex</a>  -->
+                                <a shape="rect" href="javascript:togglebib(&#39;contact4d&#39;)" class="togglebib">bibtex</a>
+
+                                <p align="justify"><i id="contact4d_abs" style="display: none;"> 
+                                  Understanding how humans interact with objects is key to building robust human-centric artificial intelligence. 
+                                  However, this area remains relatively unexplored due to the lack of large-scale datasets. 
+                                  Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled lab environments, 
+                                  and contact annotations are mostly estimated using threshold clips. 
+                                  We introduce Contact4D, a multi-view video dataset for human-object interaction that provides detailed body poses and accurate contact annotations. 
+                                  We use a flexible multi-view capture system to record individuals performing furniture assembly tasks and provide annotations for 
+                                  human detection, tracking, 2D/3D pose estimation, and ground-truth contact. 
+                                  Additionally, we propose a novel processing pipeline to extract accurate hand poses even when they are severely occluded. 
+                                  Contact4D consists of 2M images captured from 19 synchronized cameras across 350 video sequences, 
+                                  spanning diverse environments, varioius furniture types, and unique subjects. 
+                                  We evaluate existing methods for human pose estimation and human-centric contact estimation, 
+                                  demonstrating their inability to generalize to our dataset. 
+                                  Lastly, we fine-tune a pretrained MultiHMR model on Contact4D and observe an improved performance of 56.6% body MPJPE and 26.4% hand MPJPE in scenarios under severe self-occlusion and object occlusion. 
+                                  </i>
+                                </p>
+    
+                                <!-- <div style="white-space: pre-wrap; display: none;" class="bib"> -->
+                                <div id="contact4d_bib" style="white-space: pre-wrap; display: none;" class="bib">
+@inproceedings{song2024contact4d,
+title     = {Contact4D: A Video Dataset for Whole-body Human Motion and Finger Contact in Dexterous Operations},
+author    = {Song, Jyun-Ting and Kim, Jungeun and Cao, Jinkun and Lei, Yu and Yagi, Takuma and Kitani, Kris},
+booktitle = {3D Vision (3DV)},
+year      = {2026}
+}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td style="padding:20px;width:20%;vertical-align:middle">
+                          <video  width=100% muted autoplay loop>
                             <source src="images/harmony4d.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                         </td>
 
                         <td width="58%" valign="top">
-                            <p><a href="https://jyuntins.github.io/harmony4d" id="harmony4d">
+                            <p><a href="https://jyuntins.github.io/harmony4d" id="harmony4d_title">
                                 <heading>Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions</heading>
                             </a><br>
                                 Rawal Khirodkar*, <strong>Jyun-Ting Song*</strong>, Jinkun Cao, Zhengyi Luo, Kris Kitani
@@ -175,7 +237,7 @@
                                 <a href="https://jyuntins.github.io/harmony4d/">project</a> |
                                 <a href="https://huggingface.co/datasets/Jyun-Ting/Harmony4D/tree/main">dataset</a> |
                                 <!-- <a shape="rect" href="javascript:togglebib(&#39;harmony4d&#39;)" class="togglebib">bibtex</a>  -->
-                                <a shape="rect" href="javascript:togglebib(&#39;harmony4d_bib&#39;)" class="togglebib">bibtex</a>
+                                <a shape="rect" href="javascript:togglebib(&#39;harmony4d&#39;)" class="togglebib">bibtex</a>
 
                                 <p align="justify"><i id="harmony4d_abs" style="display: none;"> 
                                   Understanding how humans interact with each other is key to building realistic multi-human virtual reality systems. 
@@ -195,14 +257,12 @@
     
                                 <!-- <div style="white-space: pre-wrap; display: none;" class="bib"> -->
                                 <div id="harmony4d_bib" style="white-space: pre-wrap; display: none;" class="bib">
-                                    @incollection{song2023reinforcement,
-                                    title     = {Reinforcement Learning and Action Space Shaping for a Humanoid Agent in a Highly Dynamic Environment},
-                                    author    = {Song, Jyun-Ting and Christmann, Guilherme and Jeong, Jaesik and Baltes, Jacky},
-                                    booktitle = {Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing 2022-Winter},
-                                    pages     = {29--42},
-                                    year      = {2023},
-                                    publisher = {Springer}
-                                    }
+@inproceedings{khirodkar2024harmony4d,
+title     = {Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions},
+author    = {Khirodkar, Rawal and Song, Jyun-Ting and Cao, Jinkun and Luo, Zhengyi and Kitani, Kris},
+booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+year      = {2024}
+}
                                 </div>
                             </div>
                         </td>
@@ -229,11 +289,11 @@
     
                             </p>
     
-                            <div class="paper" id="emote">
+                            <div class="paper" id="balanceboard">
                                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-26135-0_4">paper</a> |
                                 <a href="javascript:toggleblock(&#39;balanceboard_abs&#39;)">abstract</a> |
                                 <a href="https://github.com/NTNU-ERC/Robinion-Balance-Board-PPO">project</a> |
-                                <a shape="rect" href="javascript:togglebib(&#39;emote&#39;)" class="togglebib">bibtex</a> 
+                                <a shape="rect" href="javascript:togglebib(&#39;balanceboard&#39;)" class="togglebib">bibtex</a> 
     
     
                                 <p align="justify"><i id="balanceboard_abs" style="display: none;"> 
@@ -249,7 +309,7 @@
                                   </i>
                                 </p>
     
-                                <div style="white-space: pre-wrap; display: none;" class="bib">
+                                <div id="balanceboard_bib" style="white-space: pre-wrap; display: none;" class="bib">
 @incollection{song2023reinforcement,
 title     = {Reinforcement Learning and Action Space Shaping for a Humanoid Agent in a Highly Dynamic Environment},
 author    = {Song, Jyun-Ting and Christmann, Guilherme and Jeong, Jaesik and Baltes, Jacky},
@@ -271,7 +331,7 @@ publisher = {Springer}
                           </video>
                         </td>
                         <td width="58%" valign="top">
-                            <p><a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html" id="corsmal">
+                            <p><a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html" id="corsmal_title">
                                 <heading>The CORSMAL benchmark for the prediction of the properties of containers</heading>
                             </a><br>
                                 Alessio Xompero, et al.<br>
@@ -283,11 +343,11 @@ publisher = {Springer}
     
                             </p>
     
-                            <div class="paper" id="ipman">
+                            <div class="paper" id="corsmal">
                                 <a href="https://ieeexplore.ieee.org/abstract/document/9756023">paper</a> |
                                 <a href="javascript:toggleblock(&#39;corsmal_abs&#39;)">abstract</a> |
                                 <a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html">project</a> |
-                                <a shape="rect" href="javascript:togglebib(&#39;ipman&#39;)" class="togglebib">bibtex</a> |
+                                <a shape="rect" href="javascript:togglebib(&#39;corsmal&#39;)" class="togglebib">bibtex</a> |
     
     
                                 <p align="justify"><i id="corsmal_abs" style="display: none;"> 
@@ -309,7 +369,7 @@ publisher = {Springer}
                                 </i>
                                 </p>
     
-                                <div style="white-space: pre-wrap; display: none;" class="bib">
+                                <div id="corsmal_bib" style="white-space: pre-wrap; display: none;" class="bib">
 @article{xompero2022corsmal,
 title     = {The CORSMAL benchmark for the prediction of the properties of containers},
 author    = {Xompero, Alessio and Donaher, Santiago and Iashin, Vladimir and Palermo, Francesca and Solak, G{\"o}khan and Coppola, Claudio and Ishikawa, Reina and Nagao, Yuichi and Hachiuma, Ryo and Liu, Qi and others},
