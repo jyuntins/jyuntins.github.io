@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
     <style type="text/css">
         /* Stolen from Sergey and Jon Barron */
@@ -37,6 +38,38 @@
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: 700
+        }
+
+        /* Responsive styles for mobile devices */
+        @media screen and (max-width: 768px) {
+            table[width="960"] {
+                width: 100% !important;
+                max-width: 100%;
+            }
+            
+            td[width="67%"], td[width="48%"], td[width="53%"], td[width="54%"], td[width="54.5%"], td[width="54.25%"], td[width="55%"], td[width="58%"] {
+                width: 100% !important;
+                display: block;
+            }
+            
+            td[style*="width:30%"], td[style*="width:25%"], td[style*="width:24%"], td[style*="width:23.5%"], td[style*="width:23.75%"] {
+                width: 100% !important;
+                display: block;
+                padding: 10px !important;
+            }
+            
+            img, video {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            body, td, th {
+                font-size: 14px;
+            }
+            
+            h2 {
+                font-size: 24px !important;
+            }
         }
     </style>
     <!-- <link rel="icon" type="image/png" href="seal_icon.png"> -->
