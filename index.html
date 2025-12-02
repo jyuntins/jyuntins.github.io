@@ -16,25 +16,25 @@
         }
 
         body, td, th {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-size: 15px
         }
 
         strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
 
             font-size: 14px
         }
 
         strongred {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             color: red;
             font-size: 14px
         }
 
         heading {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             font-size: 15px;
             font-weight: 700
         }
@@ -68,7 +68,19 @@
   <body>
     <script>
       function showEmail() {
-        document.getElementById('emailHolder').innerHTML = 'ude.umc.werdna@sniutnyj'.split("").reverse().join("");
+        document.getElementById('emailHolder').innerHTML = 'moc.liamg@neenidyhplar'.split("").reverse().join("");
+      }
+      
+      function toggleOlderNews() {
+        var olderNews = document.getElementById('older_news');
+        var toggleLink = document.getElementById('news_toggle');
+        if (olderNews.style.display === 'none') {
+          olderNews.style.display = 'block';
+          toggleLink.innerHTML = 'Hide older news';
+        } else {
+          olderNews.style.display = 'none';
+          toggleLink.innerHTML = 'Show older news';
+        }
       }
     </script>
 
@@ -78,31 +90,21 @@
             <td>
                 <p align="center"><font size="7">Jyun-Ting Song</font><br>
                 </p>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
                     <tbody>
                     <tr>
                         <td width="67%" valign="middle" align="justify">
     
-                          <p>
-                            I am a second-year master's student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, 
-                            advised by Prof. <a href="https://kriskitani.github.io/">Kris Kitani</a>.
-                            Previously, I earned my B.S. in Electrical Engineering from <a href="https://en.ntnu.edu.tw/">National Taiwan Normal University</a>, 
+                          <p style="line-height: 1.7;">
+                            I am an incoming PhD student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. 
+                            I previously completed my MS in Robotics at the same institute, advised by Prof. <a href="https://kriskitani.github.io/">Kris Kitani</a>. 
+                            Before that, I was a Research Scientist Intern at <a href="https://ai.meta.com/research/">Meta FAIR</a> (now the Super Intelligence Lab). 
+                            Earlier, I received my BS in Electrical Engineering from <a href="https://en.ntnu.edu.tw/">National Taiwan Normal University</a>, 
                             where I was advised by Prof. <a href="https://sites.google.com/site/jackybaltes/home">Jacky Baltes</a>.
-                            <br>
-                            <br>
-                            My research interest lies in the intersection of Computer Vision, Machine Learning and Robotics.
-                            Currently, I am working on human pose estimation and human-object contact detection.
-                            Previously, I have worked on humanoid control in both simulation and real-world robotics.
-                            <br>
-                            <br>
-                            I love humans, and I am interested in understanding them. I hope my reseach can contribute to this direction.
-                            <br>
-                            <br>
-
                           </p>
                           
                           <p style="text-align:center">
-                            <a href="https://jyuntins.github.io/#" onclick="showEmail()" id="emailHolder"> Click to Reveal Email </a> &nbsp;/&nbsp;
+                            <a href="#" onclick="showEmail(); return false;" id="emailHolder"> Click to Reveal Email </a> &nbsp;/&nbsp;
                             <a href="data/Jyun-Ting-CV.pdf">CV</a> &nbsp;/&nbsp;
                             <a href="https://scholar.google.com/citations?hl=en&user=N1dz8cAAAAAJ">Scholar</a> &nbsp;/&nbsp;
                             <a href="https://github.com/jyuntins/">GitHub</a> &nbsp;/&nbsp;
@@ -110,8 +112,8 @@
                           </p>
 
                         </td>
-                        <td style="padding:2.5%;width:40%;max-width:40%">
-                          <a href="images/jyuntins.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/jyuntins.jpg" class="hoverZoomLink"></a>
+                        <td style="padding:2.5%;width:40%;max-width:40%;text-align:center;">
+                          <a href="images/jyuntins.jpg"><img style="width:100%;max-width:200px;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/jyuntins.jpg" class="hoverZoomLink"></a>
                         </td>
                     </tr>
                     </tbody>
@@ -138,25 +140,161 @@
                     </tbody>
                 </table> -->
     
-    
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    
+                <!-- Research Interests Section -->
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8" style="margin-top: -30px;">
                   <tbody>
                     <tr>
                         <td>
+                            <h2 id="research">Research Interests</h2>
+                            <hr style="border: 0; border-top: 1px solid #ccc; margin: 0;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 5px;">
+                            <p style="margin: 0; padding: 0; line-height: 1.5;">
+                                My research focuses on advancing human-centric AI. I am currently interested in:
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 1.5em; vertical-align: top; text-align: right; padding-right: 0.5em;">•</span><span style="display: inline-block; width: calc(100% - 2em); vertical-align: top;">Multi-view capture systems for in-the-wild human reconstruction under interaction scenarios</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 1.5em; vertical-align: top; text-align: right; padding-right: 0.5em;">•</span><span style="display: inline-block; width: calc(100% - 2em); vertical-align: top;">Physically plausible human mesh recovery and optimization</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 1.5em; vertical-align: top; text-align: right; padding-right: 0.5em;">•</span><span style="display: inline-block; width: calc(100% - 2em); vertical-align: top;">Physics-based humanoid control with contact-aware estimation</span></span>
+                            </p>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- News Section -->
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
+                  <tbody>
+                    <tr>
+                        <td>
+                            <h2 id="news">News</h2>
+                            <hr style="border: 0; border-top: 1px solid #ccc; margin: 0;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 5px;">
+                            <p style="margin: 0; padding: 0; line-height: 1.5;">
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2025/12]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I passed my MSR thesis defense at Carnegie Mellon University on the thesis title "Multi View 4D Human Reconstruction under Interaction Scenarios''.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2025/11]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;"><a href="https://ai.meta.com/sam3d/">SAM3D Body</a> was released as a part of <a href="https://ai.meta.com/sam3d/">SAM3D</a> together with <a href="https://ai.meta.com/sam3/">SAM3</a>. I was part of the SAM3D Body team and contributed to the model development and model training.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2025/11]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;"><a href="https://jyuntins.github.io/harmony4d/">Contact4D</a> and <a href="https://jyuntins.github.io/harmony4d/">BodyContact4D</a> were accepted to <a href="https://3dvconf.github.io/2026/">3DV 2026</a>.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2025/06]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I attended <a href="https://cvpr.thecvf.com/Conferences/2025">CVPR 2025</a> in Nashville, United States.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2025/06]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I started a new position as a Research Scientist Intern at <a href="https://ai.meta.com/research/">Meta FAIR</a>, working on a promptable human mesh recovery model.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2024/12]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I attended <a href="https://neurips.cc/Conferences/2024">NeurIPS 2024</a> in Vancouver, Canada.</span></span>
+                                <span id="older_news" style="display: none;">
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2024/09]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;"><a href="https://jyuntins.github.io/harmony4d/">Harmony4D</a> was accepted to <a href="https://neurips.cc/Conferences/2024">NeurIPS 2024</a>, Dataset and Benchmark Track.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2024/01]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I started a new position as a Graduate Research Assistant at the Robotics Institute, Carnegie Mellon University.</span></span>
+                                <span style="display: block; margin-top: 5px; margin-bottom: 5px; padding-left: 0; text-indent: 0;"><span style="display: inline-block; width: 6em; vertical-align: top; text-align: right; padding-right: 0.5em;">• <strong>[2023/09]</strong></span><span style="display: inline-block; width: calc(100% - 6.5em); vertical-align: top;">I started my MSR journey at Carnegie Mellon University.</span></span>
+                                </span>
+                                <br>
+                                <a href="#" onclick="toggleOlderNews(); return false;" id="news_toggle" style="color: #666;">Show older news</a>
+                            </p>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Affiliation Section -->
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
+                  <tbody>
+                    <tr>
+                        <td>
+                            <h2 id="affiliation">Affiliation</h2>
+                            <hr style="border: 0; border-top: 1px solid #ccc; margin: 0;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:20px; padding-top: 5px;">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tbody>
+                                <!-- Icons row -->
+                                <tr>
+                                    <td style="padding:5px 0px 0px 0px;text-align:left;width:120px;vertical-align:top;">
+                                      <img src="images/National_Taiwan_Normal_University_logo.svg.png" alt="NTNU" style="width:120px;height:120px;object-fit:contain;display:block;">
+                                    </td>
+                                    <td style="padding:5px 0px 0px 40px;text-align:left;width:120px;vertical-align:top;">
+                                      <img src="images/cmu_icon.png" alt="CMU" style="width:120px;height:120px;object-fit:contain;display:block;">
+                                    </td>
+                                    <td style="padding:0px 0px 0px 30px;text-align:left;width:120px;vertical-align:top;">
+                                      <img src="images/meta_icon.png" alt="Meta" style="width:120px;height:120px;object-fit:contain;display:block;">
+                                    </td>
+                                </tr>
+                                <!-- Description row -->
+                                <tr>
+                                    <td style="padding:5px 0px;vertical-align:top;text-align:left;font-size:12px;width:120px;">
+                                      B.S. in EE<br>
+                                      Advisor: <a href="https://sites.google.com/site/jackybaltes/home" style="font-size:12px;">Jacky Baltes</a><br>
+                                      <em>Sept 2017 ~ Jun 2021</em>
+                                    </td>
+                                    <td style="padding:5px 0px 0px 40px;vertical-align:top;text-align:left;font-size:12px;width:120px;">
+                                      M.S. in Robotics<br>
+                                      Robotics Institute<br>
+                                      Advisor: <a href="https://kriskitani.github.io/" style="font-size:12px;">Kris Kitani</a><br>
+                                      <em>Sept 2023 ~ Present</em>
+                                    </td>
+                                    <td style="padding:5px 0px 0px 35px;vertical-align:top;text-align:left;font-size:12px;width:125px;">
+                                      Research Scientist Intern, FAIR<br>
+                                      PI: <a href="https://scholar.google.com/citations?user=k0qC-7AAAAAJ&hl=en" style="font-size:12px;">Xitong Yang</a><br>
+                                      <em>June 2025 ~ Sept 2025</em>
+                                    </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+    
+    
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
+    
+                  <tbody>
+                    <tr>
+                        <td colspan="100%">
                             <h2 id="publications">Publications</h2>
+                            <hr style="border: 0; border-top: 1px solid #ccc; margin: 0; width: 100%;">
                         </td>
                     </tr>
                   
                     <tr>
-                        <td style="padding:20px;width:20%;vertical-align:middle">
-                          <video  width=100% muted autoplay loop>
+                        <td style="padding:20px 20px 20px 0;width:23.75%;vertical-align:top;">
+                            <img src="images/sam3dbody.gif" alt="SAM 3D Body" style="width:100%;max-width:100%;object-fit:contain;display:block;">
+                        </td>
+
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
+                            <p style="margin:0;padding:0;"><a href="https://ai.meta.com/research/publications/sam-3d-body-robust-full-body-human-mesh-recovery/" id="sam3dbody_title">
+                                <heading>SAM 3D Body: Robust Full-Body Human Mesh Recovery</heading>
+                            </a><br>
+                                SAM3D Body Team at Meta
+                                <br>
+                                <em>Technical Report, 2025</em>
+                                <br>
+                                <br>
+                                A promptable 3D human mesh recovery model
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                
+                            </p>
+
+                            <div class="paper" id="sam3dbody">
+                                <a href="https://ai.meta.com/research/publications/sam-3d-body-robust-full-body-human-mesh-recovery/">Tech Report</a> |
+                                <a href="https://www.aidemos.meta.com/segment-anything/editor/convert-body-to-3d">Playground</a> |
+                                <a href="https://ai.meta.com/sam3d/">Blog</a> |
+                                <a href="https://github.com/facebookresearch/sam-3d-body">Github</a>
+                            </div>
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td style="padding:20px 20px 20px 0;width:23.75%;vertical-align:top;">
+                            <video width=100% style="object-fit:contain;display:block;" muted autoplay loop>
                             <source src="images/contact4d.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                         </td>
 
-                        <td width="58%" valign="top">
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
                             <p><a href="https://jyuntins.github.io/harmony4d" id="contact4d_title">
                                 <heading>Contact4D: A Video Dataset for Whole-body Human Motion and Finger Contact in Dexterous Operations</heading>
                             </a><br>
@@ -166,6 +304,7 @@
                                 <br>
                                 <br>
                                 A large-scale whole-body human dataset for dexterous operations with finger contact annotations  
+                                <br>
                                 <br>    
                             </p>
     
@@ -207,18 +346,59 @@ year      = {2026}
                         </td>
                     </tr>
 
+                    <tr>
+                        <td style="padding:20px 20px 20px 0;width:23.75%;vertical-align:top;">
+                            <img src="images/bodycontact4d.png" alt="BodyContact4D" style="width:100%;max-width:100%;object-fit:contain;display:block;">
+                        </td>
+
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
+                            <p><a href="#" id="bodycontact4d_title">
+                                <heading>BodyContact4D: A Multi-view Video Dataset for Understanding Human and Environment Interactions</heading>
+                            </a><br>
+                                Soyong Shin, Chaeeun Lee, Holly Chen, <strong>Jyun-Ting Song</strong>, Eni Halilaj, Kris Kitani
+                                <br>
+                                <em>3D Vision (3DV)</em>, 2026
+                                <br>
+                                <br>
+                                A large-scale human dataset for body part contact estimation.
+                                <br>    
+                            </p>
+
+                            <div class="paper" id="bodycontact4d">
+                                <a href="javascript:toggleblock(&#39;bodycontact4d_abs&#39;)">abstract</a> |
+                                <a href="#">project</a> |
+                                <a href="#">dataset</a> |
+                                <a shape="rect" href="javascript:togglebib(&#39;bodycontact4d&#39;)" class="togglebib">bibtex</a>
+
+                                <p align="justify"><i id="bodycontact4d_abs" style="display: none;"> 
+                                  <!-- Abstract text to be added -->
+                                </i>
+                                </p>
+    
+                                <div id="bodycontact4d_bib" style="white-space: pre-wrap; display: none;" class="bib">
+@inproceedings{shin2026bodycontact4d,
+title     = {BodyContact4D: A Multi-view Video Dataset for Understanding Human and Environment Interactions},
+author    = {Shin, Soyong and Lee, Chaeeun and Chen, Holly and Song, Jyun-Ting and Halilaj, Eni and Kitani, Kris},
+booktitle = {3D Vision (3DV)},
+year      = {2026}
+}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
 
 
 
                     <tr>
-                        <td style="padding:20px;width:20%;vertical-align:middle">
-                          <video  width=100% muted autoplay loop>
+                        <td style="padding:20px 20px 20px 0;width:23.75%;vertical-align:top;">
+                          <video width=100% style="object-fit:contain;display:block;" muted autoplay loop>
                             <source src="images/harmony4d.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                         </td>
 
-                        <td width="58%" valign="top">
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
                             <p><a href="https://jyuntins.github.io/harmony4d" id="harmony4d_title">
                                 <heading>Harmony4D: A Video Dataset for In-The-Wild Close Human Interactions</heading>
                             </a><br>
@@ -227,8 +407,10 @@ year      = {2026}
                                 <em>Neural Information Processing Systems (NeurIPS)</em>, 2024
                                 <br>
                                 <br>
-                                A large-scale multihuman dataset captured in in-the-wild environments, featuring diverse dynamic activities  
-                                <br>    
+                                A large-scale multihuman dataset for close human interactions in in-the-wild environments  
+                                <br>   
+                                <br>  
+                                <br>  
                             </p>
     
                             <div class="paper" id="harmony4d">
@@ -269,13 +451,13 @@ year      = {2024}
                     </tr>
     
                     <tr>
-                        <td style="padding:20px;width:20%;vertical-align:middle">
-                          <video  width=100% muted autoplay loop>
+                        <td style="padding:20px 20px 20px 0;width:24%;vertical-align:top;">
+                          <video width=100% style="object-fit:contain;display:block;" muted autoplay loop>
                             <source src="images/balance_board.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                         </td>
-                        <td width="58%" valign="top">
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
                             <p><a href="https://github.com/NTNU-ERC/Robinion-Balance-Board-PPO" id="balance board">
                                 <heading>Reinforcement Learning and Action Space Shaping for a Humanoid Agent in a Highly Dynamic Environment</heading>
                             </a><br>
@@ -283,10 +465,10 @@ year      = {2024}
                                 <em>Springer's Studies in Computational Intelligence</em>, 2023
                                 <br>
                                 <br>
-                                RL algorithm structure based on Proximal Policy Optimization (PPO) to train a humanoid agent 
-                                to play a balance board in Isaac Gym                                
-                                <br>
-    
+                                <p style="position: relative; top: -5px;">
+                                  RL frameword to train a humanoid agent to play a balance board in simulation                                
+                                </p>
+
                             </p>
     
                             <div class="paper" id="balanceboard">
@@ -324,13 +506,13 @@ publisher = {Springer}
                     </tr>
     
                     <tr>
-                        <td style="padding:20px;width:20%;vertical-align:middle">
-                          <video  width=100% muted autoplay loop>
+                        <td style="padding:20px 20px 20px 0;width:23.75%;vertical-align:top;">
+                          <video width=100% style="object-fit:contain;display:block;" muted autoplay loop>
                             <source src="images/corsmal.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                           </video>
                         </td>
-                        <td width="58%" valign="top">
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 20px 0;">
                             <p><a href="https://corsmal.eecs.qmul.ac.uk/benchmark.html" id="corsmal_title">
                                 <heading>The CORSMAL benchmark for the prediction of the properties of containers</heading>
                             </a><br>
@@ -340,7 +522,8 @@ publisher = {Springer}
                                 <br>
                                 Estimate mass, type, and fill level of containers using multimodal dataset (visual, audio)
                                 <br>
-    
+                                <br>
+                                <br>
                             </p>
     
                             <div class="paper" id="corsmal">
