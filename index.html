@@ -58,6 +58,43 @@
                 padding: 10px !important;
             }
             
+            /* Fix profile picture alignment */
+            td[style*="text-align:center"], td[style*="padding:2.5%"] {
+                text-align: center !important;
+                padding: 10px !important;
+                width: 100% !important;
+                display: block;
+            }
+            
+            /* Add spacing between intro links and research interests */
+            p[style*="text-align:center"] {
+                margin-bottom: 25px !important;
+            }
+            
+            /* Adjust Research Interests section spacing on mobile */
+            table[style*="margin-top: -30px"] {
+                margin-top: 10px !important;
+            }
+            
+            /* Fix publication text alignment - ensure text is left-aligned within publication section */
+            table[width="100%"][align="center"] {
+                width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Ensure publication text cells are left-aligned and properly padded */
+            td[width="48%"], td[width="53%"], td[width="54%"], td[width="54.5%"], td[width="54.25%"], td[width="55%"], td[width="58%"] {
+                text-align: left !important;
+                padding: 10px !important;
+                width: 100% !important;
+                display: block;
+            }
+            
+            /* Fix publication table alignment */
+            table[width="100%"] td {
+                text-align: left !important;
+            }
+            
             img, video {
                 max-width: 100% !important;
                 height: auto !important;
