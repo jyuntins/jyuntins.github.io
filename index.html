@@ -52,6 +52,38 @@
                 display: block;
             }
             
+            /* Reorder intro section for mobile: profile picture first, then links, then text */
+            /* Only target the intro table - be very specific to avoid affecting other sections */
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            
+            /* Profile picture appears first - only in intro section */
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[style*="text-align:center"],
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[style*="padding:2.5%"],
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[style*="width:40%"] {
+                order: 1 !important;
+            }
+            
+            /* Extract links from text cell and place them after profile picture */
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[width="67%"] p[style*="text-align:center"] {
+                order: 2 !important;
+                position: relative !important;
+                margin-top: 15px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            /* Move links out of text cell visually by making them appear before the text cell */
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[width="67%"] {
+                display: contents !important;
+            }
+            
+            /* Intro text appears third */
+            table[width="100%"][cellpadding="8"]:first-of-type tbody tr td[width="67%"] p[style*="line-height"] {
+                order: 3 !important;
+            }
+            
             td[style*="width:30%"], td[style*="width:25%"], td[style*="width:24%"], td[style*="width:23.5%"], td[style*="width:23.75%"] {
                 width: 100% !important;
                 display: block;
@@ -67,10 +99,12 @@
                 margin: 0 auto !important;
             }
             
-            /* Ensure profile picture image is centered */
+            /* Ensure profile picture image is centered and smaller on mobile */
             td[style*="text-align:center"] img, td[style*="padding:2.5%"] img, td[style*="width:40%"] img {
                 margin: 0 auto !important;
                 display: block !important;
+                max-width: 150px !important;
+                width: 150px !important;
             }
             
             /* Add spacing between intro links and research interests */
@@ -119,6 +153,19 @@
                 width: 100% !important;
                 height: auto !important;
                 box-sizing: border-box !important;
+            }
+            
+            /* Keep affiliation icons at their original size on mobile */
+            img[src*="National_Taiwan_Normal_University"],
+            img[src*="cmu_icon"],
+            img[src*="meta_icon"],
+            img[alt="NTNU"],
+            img[alt="CMU"],
+            img[alt="Meta"] {
+                width: 120px !important;
+                height: 120px !important;
+                max-width: 120px !important;
+                max-height: 120px !important;
             }
             
             /* Fix publication section container to prevent overflow */
@@ -513,7 +560,7 @@ year      = {2026}
                                 A large-scale multihuman dataset for close human interactions in in-the-wild environments  
                                 <br>   
                                 <br>  
-                                <br>  
+                                <br>    
                             </p>
     
                             <div class="paper" id="harmony4d">
@@ -568,7 +615,7 @@ year      = {2024}
                                 <p style="position: relative; top: -5px;">
                                   RL frameword to train a humanoid agent to play a balance board in simulation                                
                                 </p>
-
+    
                             </p>
     
                             <div class="paper" id="balanceboard">
