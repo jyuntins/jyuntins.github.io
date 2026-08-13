@@ -227,7 +227,7 @@
   <body>
     <script>
       function showEmail() {
-        document.getElementById('emailHolder').innerHTML = 'moc.liamg@neenidyhplar'.split("").reverse().join("");
+        document.getElementById('emailHolder').innerHTML = 'ude.umc.werdna@snitnuyj'.split("").reverse().join("");
       }
       
       function toggleOlderNews() {
@@ -256,15 +256,15 @@
                         <td width="67%" valign="middle" align="justify">
     
                           <p style="line-height: 1.7;">
-                            I am an incoming PhD student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. 
-                            I previously completed my MS in Robotics at the same institute, advised by Prof. <a href="https://kriskitani.github.io/">Kris Kitani</a>. 
-                            Before that, I was a Research Scientist Intern at <a href="https://ai.meta.com/research/">Meta FAIR</a> (now the Super Intelligence Lab). 
-                            Earlier, I received my BS in Electrical Engineering from <a href="https://en.ntnu.edu.tw/">National Taiwan Normal University</a>, 
+                            I am a first-year Ph.D. student at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a>, <a href="https://www.cmu.edu/">Carnegie Mellon University</a>, advised by Prof. <a href="https://kriskitani.github.io/">Kris Kitani</a>.
+                            I previously earned my Master of Science in Robotics (MSR) from the same institute, also under Prof. Kitani's supervision.
+                            Before starting my Ph.D., I was a Research Scientist Intern at <a href="https://ai.meta.com/research/">Meta FAIR</a>.
+                            I received my B.S. in Electrical Engineering from <a href="https://en.ntnu.edu.tw/">National Taiwan Normal University</a>,
                             where I was advised by Prof. <a href="https://sites.google.com/site/jackybaltes/home">Jacky Baltes</a>.
                           </p>
                           
                           <p style="color:red; text-align:center; line-height: 1.4;">
-                            I am currently looking for a summer internship in 2026.
+                            I am currently looking for a summer internship in 2027.
                           </p>
 
                           <p style="text-align:center">
@@ -388,6 +388,93 @@
                         <td colspan="100%">
                             <h2 id="publications">Publications</h2>
                             <hr style="border: 0; border-top: 1px solid #ccc; margin: 0; width: 100%;">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:20px 20px 40px 0;width:23.75%;vertical-align:top;">
+                            <img src="images/interpet4d.gif" alt="InterPet4D" style="width:100%;max-width:100%;object-fit:contain;display:block;">
+                        </td>
+
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 40px 0;">
+                            <div class="pub-text">
+                                <p class="pub-meta"><a href="https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/" id="interpet4d_title">
+                                    <heading>InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation</heading>
+                                </a><br>
+                                    Yichen Peng*, <strong>Jyun-Ting Song*</strong>, Chen-Chieh Liao*, Kris Kitani, Hideki Koike, Erwin Wu
+                                    <br>
+                                    <em>European Conference on Computer Vision (ECCV)</em>, 2026
+                                </p>
+                                <p class="pub-desc">
+                                    A multimodal 4D dataset of natural human-dog interactions for pet motion generation.
+                                </p>
+
+                                <div class="paper" id="interpet4d">
+                                    <a href="https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/paper.pdf">paper</a> |
+                                    <a href="javascript:toggleblock(&#39;interpet4d_abs&#39;)">abstract</a> |
+                                    <a href="https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/">video</a> |
+                                    <a href="https://interactive-intelligence-lab.github.io/InterPet4D-Homepage/">project</a> |
+                                    <a href="https://huggingface.co/datasets/ohicarip/interpet4d">dataset</a> |
+                                    <a shape="rect" href="javascript:togglebib(&#39;interpet4d&#39;)" class="togglebib">bibtex</a>
+
+                                    <p align="justify"><i id="interpet4d_abs" style="display: none;">
+                                        InterPet4D captures synchronized multi-view and egocentric video, audio, and reconstructed 3D motion from natural human-dog interactions. It contains 6.8 million frames from 23 people and 13 dogs across 11 breeds. The work also introduces InterPetMoGen, a framework that generates dog motion conditioned on human gestures and audio.
+                                    </i></p>
+
+                                    <div id="interpet4d_bib" style="white-space: pre-wrap; display: none;" class="bib">
+@inproceedings{peng2026interpet4d,
+title     = {InterPet4D: A Multimodal 4D Human-Pet Interaction Dataset for Pet Motion Generation},
+author    = {Peng, Yichen and Song, Jyun-Ting and Liao, Chen-Chieh and Kitani, Kris and Koike, Hideki and Wu, Erwin},
+booktitle = {European Conference on Computer Vision (ECCV)},
+year      = {2026}
+}
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:20px 20px 40px 0;width:23.75%;vertical-align:top;">
+                            <img src="images/grip.png" alt="Ground Reaction Inertial Poser" style="width:100%;max-width:100%;object-fit:contain;display:block;">
+                        </td>
+
+                        <td width="54.25%" valign="top" style="vertical-align:top;padding:20px 0 40px 0;">
+                            <div class="pub-text">
+                                <p class="pub-meta"><a href="https://ryosukehori.github.io/grip-project/" id="grip_title">
+                                    <heading>Ground Reaction Inertial Poser: Physics-based Human Motion Capture from Sparse IMUs and Insole Pressure Sensors</heading>
+                                </a><br>
+                                    Ryosuke Hori, <strong>Jyun-Ting Song</strong>, Zhengyi Luo, Jinkun Cao, Soyong Shin, Hideo Saito, Kris Kitani
+                                    <br>
+                                    <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2026
+                                </p>
+                                <p class="pub-desc">
+                                    Physics-based full-body motion capture using four wearable IMUs and insole pressure sensors.
+                                </p>
+
+                                <div class="paper" id="grip">
+                                    <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Hori_Ground_Reaction_Inertial_Poser_Physics-based_Human_Motion_Capture_from_Sparse_CVPR_2026_paper.pdf">paper</a> |
+                                    <a href="javascript:toggleblock(&#39;grip_abs&#39;)">abstract</a> |
+                                    <a href="https://ryosukehori.github.io/grip-project/">project</a> |
+                                    <a href="https://github.com/RyosukeHori/GRIP">code</a> |
+                                    <a href="https://github.com/RyosukeHori/PRISM">dataset</a> |
+                                    <a href="https://www.youtube.com/watch?v=qK5_5gAFQLI">video</a> |
+                                    <a shape="rect" href="javascript:togglebib(&#39;grip&#39;)" class="togglebib">bibtex</a>
+
+                                    <p align="justify"><i id="grip_abs" style="display: none;">
+                                        GRIP combines signals from four wearable IMUs with foot-pressure measurements to recover physically plausible human motion. A kinematic network estimates pose and velocity, while a dynamics network controls a digital humanoid in simulation. The accompanying PRISM dataset provides synchronized inertial, pressure, motion-capture, and environment data for training and evaluation.
+                                    </i></p>
+
+                                    <div id="grip_bib" style="white-space: pre-wrap; display: none;" class="bib">
+@inproceedings{hori2026grip,
+title     = {Ground Reaction Inertial Poser: Physics-based Human Motion Capture from Sparse IMUs and Insole Pressure Sensors},
+author    = {Hori, Ryosuke and Song, Jyun-Ting and Luo, Zhengyi and Cao, Jinkun and Shin, Soyong and Saito, Hideo and Kitani, Kris},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+year      = {2026}
+}
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                   
